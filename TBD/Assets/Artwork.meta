@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 3a74b88d1a77cd44a92f4edebb61d23c
+=======
+<<<<<<<< HEAD:TBD/Assets/Artwork.meta
+guid: 667dd78fd2d5dbb4d93d6bbda8c93b5e
+========
+guid: 324454b711953a1488a6e1a48ea34e8d
+>>>>>>>> 9feb5a1b2d975968158c0b3f470fe1087c46be9d:TBD/Assets/Scripts.meta
+>>>>>>> 9feb5a1b2d975968158c0b3f470fe1087c46be9d
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
