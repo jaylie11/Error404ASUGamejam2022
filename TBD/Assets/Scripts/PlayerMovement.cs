@@ -47,9 +47,11 @@ public class PlayerMovement : MonoBehaviour
 		//Note, code might change here depending on the size of the sprites
 		moveDelta = new Vector3(x,0,0);
 		if (moveDelta.x < 0) {
-			transform.localScale = new Vector3(-.16f,.16f,1f);
+			//transform.localScale = new Vector3(-.16f,.16f,1f);
+			transform.localScale = new Vector3(-1f,1f,1f);
 		} else if (moveDelta.x > 0) {
-			transform.localScale = new Vector3(.16f,.16f,1f);
+			//transform.localScale = new Vector3(.16f,.16f,1f);
+			transform.localScale = Vector3.one;
 		}
 	//####################################################################################################################################################################################		
 		//Note, we are not changing the Y value since that's for jumping
