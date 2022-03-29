@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
 		//Grab the number between -1 and 1 for Left and right movement
 		float x = Input.GetAxisRaw("Horizontal");
 		
-	//###################################################################################################################################################################################################################################################################################
+//###################################################################################################################################################################################################################################################################################
 		//If the last given movement was negative, it will turn the sprite left, if not, it will return it normal.
 		//Note, code might change here depending on the size of the sprites
 		moveDelta = new Vector3(x,0,0);
@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
 			//transform.localScale = new Vector3(.16f,.16f,1f);
 			transform.localScale = Vector3.one;
 		}
-	//####################################################################################################################################################################################		
+//####################################################################################################################################################################################		
 		//Note, we are not changing the Y value since that's for jumping
 		movePosition = new Vector3(x,0,0);
 		transform.Translate(movePosition * Time.fixedDeltaTime * playerSpeed );
@@ -65,24 +65,8 @@ public class PlayerMovement : MonoBehaviour
 		//Store it inside a RaycastHit2D called "raycastHit2d"
 	private bool isGrounded() {
 		RaycastHit2D raycastHit2d = Physics2D.BoxCast(BC2D.bounds.center, BC2D.bounds.size, 0f, Vector2.down, .1f,foreGroundLayerMask);
-		Debug.Log(raycastHit2d.collider);
+		//Debug.Log(raycastHit2d.collider);
 		return raycastHit2d.collider != null;
 	}
 }
 //####################################################################################################################################################################################
-//Random Old Code
-	//Grabs the current velocity of the player. It's used later for checking the isAir bool
-	//Vector3 testLog = rb2D.velocity;
-	// if (Input.GetButtonDown("Jump")) {
-		// Debug.Log("jumped");
-		// //If the player is not in the air, allow them to jump
-		// if (!inAir) {
-			// rb2D.AddForce(transform.up * (32 * jumpForce));
-			// inAir = true;
-		// }
-	// }
-	
-	// //Checks if the player lands on the floor
-	// if (testLog.y == 0.0f) {
-		// inAir = false;
-		// Debug.Log("airClear");
