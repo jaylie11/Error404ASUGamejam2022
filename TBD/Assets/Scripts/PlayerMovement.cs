@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
 	private Vector3 movePosition;
 	//private bool inAir = false;
 	private Vector3 moveDelta;
+	public Animator animator;
 	
 	//Grab the gameComponents
     private void Awake()
@@ -41,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
 	private void FixedUpdate() {
 		//Grab the number between -1 and 1 for Left and right movement
 		float x = Input.GetAxisRaw("Horizontal");
+		animator.SetFloat("Speed",Mathf.Abs(x));
 		
 //###################################################################################################################################################################################################################################################################################
 		//If the last given movement was negative, it will turn the sprite left, if not, it will return it normal.
